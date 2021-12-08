@@ -45,8 +45,6 @@ endif()
 
 add_definitions("-DLOCALSTATEDIR=\"${LOCALSTATEDIR}\"")
 
-set(CMAKE_INSTALL_LIBDIR "${CMAKE_INSTALL_PREFIX}/lib/${CMAKE_LIBRARY_ARCHITECTURE}" CACHE PATH "Output directory for libraries")
-
 option(BUILD_DEMOS "Build the demos" ON)
 
 #
@@ -89,11 +87,11 @@ configure_file(${CMAKE_MODULE_PATH}/simplemailqt5-config-version.cmake.in
 )
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/SimpleMail2Qt${QT_VERSION_MAJOR}Config.cmake
     ${CMAKE_CURRENT_BINARY_DIR}/SimpleMail2Qt${QT_VERSION_MAJOR}ConfigVersion.cmake
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleMail2Qt${QT_VERSION_MAJOR}/
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/SimpleMail2Qt${QT_VERSION_MAJOR}/
 )
 
 install(EXPORT SimpleMailTargets
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/SimpleMail${PROJECT_VERSION_MAJOR}Qt${QT_VERSION_MAJOR}/
+    DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/SimpleMail${PROJECT_VERSION_MAJOR}Qt${QT_VERSION_MAJOR}/
     FILE SimpleMail${PROJECT_VERSION_MAJOR}Qt${QT_VERSION_MAJOR}Targets.cmake
     NAMESPACE SimpleMail::
     COMPONENT Devel
