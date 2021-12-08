@@ -148,6 +148,7 @@ void SendEmail::sendMailSync(const MimeMessage &msg)
     QString password = ui->password->text();
 
     Sender smtp(host, port, ct);
+    smtp.setAuthMethod(Sender::AuthLogin);
     if (!user.isEmpty()) {
         smtp.setUser(user);
         smtp.setPassword(password);
