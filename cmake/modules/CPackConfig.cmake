@@ -1,6 +1,7 @@
 set(CPACK_PACKAGE_VENDOR "Daniel Nicoletti")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "An SMTP library written in C++ for Qt.")
 set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
+set(CPACK_PACKAGE_VERSION "2.3.0")
 set(CPACK_PACKAGE_CONTACT "Daniel Nicoletti <dantti12@gmail.com>")
 
 if(UNIX)
