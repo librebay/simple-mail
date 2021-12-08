@@ -45,7 +45,7 @@ endif()
 
 add_definitions("-DLOCALSTATEDIR=\"${LOCALSTATEDIR}\"")
 
-option(BUILD_DEMOS "Build the demos" ON)
+option(BUILD_DEMOS "Build the demos" OFF)
 
 #
 # Custom C flags
